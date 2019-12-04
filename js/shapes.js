@@ -27,6 +27,7 @@ window.onload = function() {
 
 const sayHello = function() {
     // write your exercise 1 code here
+    const canvas = document.getElementById("student")
 };
 
 /*
