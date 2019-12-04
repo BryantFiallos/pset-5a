@@ -27,7 +27,16 @@ window.onload = function() {
 
 const sayHello = function() {
     // write your exercise 1 code here
-    const canvas = document.getElementById("student")
+    const canvas = document.getElementById('student-canvas-1');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    do {
+      var message = prompt("Message: ")
+      if (message.length > 50) {
+        alert("yor message is too long")
+      }
+    }
 };
 
 /*
