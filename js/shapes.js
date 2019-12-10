@@ -59,12 +59,12 @@ var x = 0;
 var y = 0;
 
     do {
-      var width = prompt("Width: ")
-      var height = prompt("Height: ")
-      var x = prompt("X: ")
-      var y = prompt("Y: ")
+      var width = Number(prompt("Width: "))
+      var height = Number(prompt("Height: "))
+      var x = Number(prompt("X: "))
+      var y = Number(prompt("Y: "))
 
-    if (width == null || height == null || x = null || y = null)
+    if (width == null || height == null || x == null || y == null)
     break;
     if (width < 1 || width > 1024) {
     alert("Your width must be between 1 and 1024.")
@@ -79,6 +79,11 @@ var y = 0;
     alert("Your y-coordinate must be between 1 and 512.")
   }
   }
+  while (width < 1 || width > 1024 || height < 1 || height > 512 || x < 1 || x > 1024 || y < 1 || y > 512 || Number.isNaN(width) || Number.isNaN(height) || Number.isNaN(x) || Number.isNaN(y) || x + width > 512 || y + height > 1024)
+
+if (!(width == null) && !(height == null) && !(x == null) && !(y == null)) {
+  ctx.beginPath();
+}
 };
 
 /*
