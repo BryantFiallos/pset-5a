@@ -19,6 +19,7 @@ window.onload = function() {
     // equivalent set of six event listeners for your solutions. the first one is done for you.
 
     document.getElementById("hello").onclick = sayHello;
+    document.getElementById("rectangle").onclick = drawRectangle;
 }
 
 /*
@@ -83,6 +84,9 @@ var y = 0;
 
 if (!(width == null) && !(height == null) && !(x == null) && !(y == null)) {
   ctx.beginPath();
+  ctx.rect(x, y, width, height);
+  ctx.closePath();
+  ctx.stroke();
 }
 };
 
