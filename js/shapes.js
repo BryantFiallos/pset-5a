@@ -39,7 +39,7 @@ const sayHello = function() {
     } while (message.length > 50) {
 
       ctx.font = "48px sans-serif"
-      ctx.strokeText(message, 30, 70, 994) 
+      ctx.strokeText(message, 30, 70, 994)
     }
 };
 
@@ -49,6 +49,36 @@ const sayHello = function() {
 
 const drawRectangle = function() {
     // write your exercise 2 code here
+    const canvas = document.getElementById('student-canvas-2')
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+var height = 0;
+var width = 0;
+var x = 0;
+var y = 0;
+
+    do {
+      var width = prompt("Width: ")
+      var height = prompt("Height: ")
+      var x = prompt("X: ")
+      var y = prompt("Y: ")
+
+    if (width == null || height == null || x = null || y = null)
+    break;
+    if (width < 1 || width > 1024) {
+    alert("Your width must be between 1 and 1024.")
+  }
+    if (height < 1 || height > 512) {
+    alert("Your height must be between 1 and 512.")
+  }
+    if (x < 1 || x > 1024) {
+    alert("Your x-coordinate must be between 1 and 1024.")
+  }
+    if (y < 1 || y > 512) {
+    alert("Your y-coordinate must be between 1 and 512.")
+  }
+  }
 };
 
 /*
