@@ -36,6 +36,10 @@ const sayHello = function() {
       if (message.length > 50) {
         alert("yor message is too long")
       }
+    } while (message.length > 50) {
+
+      ctx.font = "48px sans-serif"
+      ctx.strokeText(message, 30, 70, 994) 
     }
 };
 
