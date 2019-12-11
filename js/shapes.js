@@ -97,6 +97,16 @@ if (!(width == null) && !(height == null) && !(x == null) && !(y == null)) {
 
 const drawColoredRectangle = function() {
     // write your exercise 3 code here
+    const canvas = document.getElementById("student-canvas-3");
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    do {
+      var color = (prompt("Color: "))
+      if (color = null) {
+        break;
+      }
+    }
 };
 
 /*
