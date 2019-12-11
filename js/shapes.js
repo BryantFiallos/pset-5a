@@ -106,7 +106,12 @@ const drawColoredRectangle = function() {
       if (color = null) {
         break;
       }
+      color = String(color)
+      var colorInput = color.toUpperCase()
+      if (colorInput != "GREEN")  //need to continue here
     }
+
+
 };
 
 /*
