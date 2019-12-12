@@ -108,11 +108,18 @@ const drawColoredRectangle = function() {
       }
       color = String(color)
       var colorInput = color.toUpperCase()
-      if (colorInput != "GREEN")  //need to continue here
+      if (colorInput != "GREEN" && colorInput != "BLACK" && colorInput != "BLUE" && colorInput != "ORANGE" && colorInput != "PURPLE" && colorInput != "RED" && colorInput != "YELLOW") {
+        alert(color + " is not a supported color.")
     }
+  } while (colorInput != "GREEN" && colorInput != "BLACK" && colorInput != "BLUE" && colorInput != "ORANGE" && colorInput != "PURPLE" && colorInput != "RED" && colorInput != "YELLOW")
 
-
+  if (color != null) {
+    ctx.fillStyle = colorInput;
+    ctx.fillRect(10, 10, 100, 50);
+  }
 };
+
+
 
 /*
  * Exercise 4.
