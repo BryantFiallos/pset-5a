@@ -135,7 +135,7 @@ const drawTriangle = function() {
     do {
       var side1 = prompt("Side 1: ");
       var side2 = prompt("Side 2: ");
-      var side3 = prompt("Side 3: "):
+      var side3 = prompt("Side 3: ");
 
       var height = Math.min(side1, side2, side3);
       var hypotenuse = Math.max(side1, side2, side3);
