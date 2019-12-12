@@ -155,8 +155,22 @@ if ((height ** 2) + (base ** 2) != (hypotenuse ** 2) || height == 0 || hypotenus
       if (Math.isNaN(side1) || Math.isNaN(side2) || Math.isNaN(side3)) {
         alert("One of your sides is not a number.")
       }
-    }
-};
+      if (height > 512 || hypotenuse > 1310720 || base > 1024) {
+        alert("Your triangle won't fit on the canvas.")
+      }
+    } while ((Math.floor(base)*Math.floor(base) + height*height != hypotenuse*hypotenuse) || isNaN(firstSide) || isNaN(secondSide) || isNaN(thirdSide) || base > 1024 || height > 512 || hypotenuse > 1144.8664 || base == 0 || height == 0 || hypotenuse == 0)
+
+    if ((base*base + height*height == hypotenuse*hypotenuse) && (base < 1024 && height < 512 && hypotenuse < 1145) && (base != 0 && height != 0 && hypotenuse != 0) && (base != null && height != null && hypotenuse != null)) {
+   height = height + 25
+   base = base + 25
+   ctx.beginPath();
+   ctx.moveTo(25, 25);
+   ctx.lineTo(25, height);
+   ctx.lineTo(base, height)
+   ctx.lineTo(25, 25)
+   ctx.stroke();
+}
+}
 
 /*
  * Exercise 5.
