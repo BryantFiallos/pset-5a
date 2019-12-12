@@ -148,17 +148,17 @@ const drawTriangle = function() {
       side2 = Number(side2);
       side3 = Number(side3);
 
-if ((height ** 2) + (base ** 2) != (hypotenuse ** 2) || height == 0 || hypotenuse == 0 || base == 0) {
+if ((height ** 2) + (base ** 2) != (hypotenuse ** 2) || height == 0 || hypotenuse == 0 || base == 0 || side1+side2+side3-hypotenuse-height != base) {
   alert("That's not a valid right triangle.")
 }
 
-      if (Math.isNaN(side1) || Math.isNaN(side2) || Math.isNaN(side3)) {
+      if (Number.isNaN(side1) || Number.isNaN(side2) || Number.isNaN(side3)) {
         alert("One of your sides is not a number.")
       }
       if (height > 512 || hypotenuse > 1310720 || base > 1024) {
         alert("Your triangle won't fit on the canvas.")
       }
-    } while ((Math.floor(base)*Math.floor(base) + height*height != hypotenuse*hypotenuse) || isNaN(firstSide) || isNaN(secondSide) || isNaN(thirdSide) || base > 1024 || height > 512 || hypotenuse > 1144.8664 || base == 0 || height == 0 || hypotenuse == 0)
+    } while ((Math.floor(base)*Math.floor(base) + height*height != hypotenuse*hypotenuse) || Number.isNaN(side1) || Number.isNaN(side2) || Number.isNaN(side3) || base > 1024 || height > 512 || hypotenuse > 1144.8664 || base == 0 || height == 0 || hypotenuse == 0)
 
     if ((base*base + height*height == hypotenuse*hypotenuse) && (base < 1024 && height < 512 && hypotenuse < 1145) && (base != 0 && height != 0 && hypotenuse != 0) && (base != null && height != null && hypotenuse != null)) {
    height = height + 25
