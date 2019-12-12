@@ -21,6 +21,7 @@ window.onload = function() {
     document.getElementById("hello").onclick = sayHello;
     document.getElementById("rectangle").onclick = drawRectangle;
     document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
+    document.getElementById("triangle").onclick = drawTriangle;
 }
 
 /*
@@ -127,6 +128,34 @@ const drawColoredRectangle = function() {
 
 const drawTriangle = function() {
     // write your exercise 4 code here
+    const canvas = document.getElementById("student-canvas-4");
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    do {
+      var side1 = prompt("Side 1: ");
+      var side2 = prompt("Side 2: ");
+      var side3 = prompt("Side 3: "):
+
+      var height = Math.min(side1, side2, side3);
+      var hypotenuse = Math.max(side1, side2, side3);
+      var base = Math.sqrt((hypotenuse ** 2) - (height ** 2))
+
+      if (height == 0 && hypotenuse == 0 && base == 0) {
+        break;
+      }
+      side1 = Number(side1);
+      side2 = Number(side2);
+      side3 = Number(side3);
+
+if ((height ** 2) + (base ** 2) != (hypotenuse ** 2) || height == 0 || hypotenuse == 0 || base == 0) {
+  alert("That's not a valid right triangle.")
+}
+
+      if (Math.isNaN(side1) || Math.isNaN(side2) || Math.isNaN(side3)) {
+        alert("One of your sides is not a number.")
+      }
+    }
 };
 
 /*
