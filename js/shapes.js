@@ -20,7 +20,7 @@ window.onload = function() {
 
     document.getElementById("hello").onclick = sayHello;
     document.getElementById("rectangle").onclick = drawRectangle;
-    document.getElementById("colored-rectangle") = drawColoredRectangle;
+    document.getElementById("colored-rectangle").onclick = drawColoredRectangle;
 }
 
 /*
@@ -103,7 +103,7 @@ const drawColoredRectangle = function() {
 
     do {
       var color = (prompt("Color: "))
-      if (color = null) {
+      if (color == null) {
         break;
       }
       color = String(color)
